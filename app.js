@@ -8,8 +8,10 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const defaultRoutes = require('./routes/default'); 
 app.use(bodyParser.urlencoded({extended:false}));
+
+const defaultRoutes = require('./routes/default');
+
 app.use(express.static(path.join(__dirname,'public')))
 
 /* app.use('/addProduct',(req,res,next)=>{

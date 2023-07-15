@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* custom css */
+  
+.row {
+    display: flex;
+}
+  
+.column-content {
+    flex: 800%;
+    /* padding: 0px; */
+}
+.column-image {
+    flex: 100%;
+    padding: 60px;
+}
+/* custom css */
 
 * {
     margin: 0;
@@ -41,6 +56,10 @@ body {
     z-index: 100;
 }
 
+.header span {
+    color: var(--main-color);
+}
+
 .logo {
     font-size: 3.5rem;
     color: var(--text-color);
@@ -76,7 +95,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/chome.jpg') no-repeat;
+    background: url('/fhome.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -92,7 +111,7 @@ section {
 }
 
 .home-content h1 span {
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 .home-content .text-animate {
@@ -279,22 +298,27 @@ span {
     border-right: .2rem solid var(--main-color);
 }
 
-.about-content {
+/* .about-content {
     text-align: center;
-}
+} */
+
+/* .about-content h2 {
+   align-items: flex-end;
+} */
 
 .about-content h3 {
     font-size: 2.6rem;
 }
 
 .about-content p {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     margin: 2rem 0 3rem;
 }
 
 .btn-box.btns {
     display: inline-block;
     width: 15rem;
+    padding: 0px 0px 0px 500px;
 }
 
 .btn-box.btns a::before {
@@ -385,14 +409,20 @@ span {
 }
 
 .education-content .content p {
-    font-size: 1.6rem;
+    font-size: 2.0rem;
     padding-top: .5rem;
 }
 
 /* custom css */ 
 
+.skills-content .progress .content {
+    font-size: 2.6rem;
+    padding-top: .5rem;
+    font-weight: bold;
+}
+
 .skills-content .progress p {
-    font-size: 1.6rem;
+    font-size: 2.0rem;
     padding-top: .5rem;
 }
 
@@ -629,4 +659,34 @@ span {
 
 .footer-iconTop a:hover i {
     color: var(--main-color);
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+  }
+  
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: 220px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+ 
+  /* On hover, add a black background color with a little bit see-through */
+.next:hover {
+    background-color: var(--main-color);
+    color: black;
 }
