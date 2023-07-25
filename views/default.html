@@ -5,26 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utsav Garg PortFolio</title>
     <link rel="stylesheet" href="/css/style.css">
-
+    <!-- add icon link -->
+    <link rel = "icon" href ="titleIcon.jpg" type = "image/x-icon">
+    
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+        // Image carasousel 
+        let slideIndex = 1;
+            showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+
+        // Project Section
+        function pro_id_1(){
+            console.log("im pro_id_1");
+            document.getElementById('pro_id_1_h').innerHTML = '<div class="year"><i class="bx bxs-calendar"></i> May 2023 - Present</div><h3><span>PortFolio Website </span></h3><p><a class="target" target="_blank" href="https://utsav-garg-portfolio.onrender.com">Click To Visit</a></p><p>Developing a personal portfolio website using Express.js, showcasing my educational and professional journey.</p><p>Integrated various front-end technologies, including HTML, CSS, and JavaScript, to design an aesthetically pleasing and user-friendly interface.</p><p>Utilized Git version control to manage the projects codebase and Successfully deployed the website on a free cloud-based server to make it publicly accessible and increase online visibility.</p><p>Developed and followed a plan while wokring on the project helping me to learn about the difficluties towards project planning.</p>';
+        }
+
+        function pro_id_2(){
+            console.log("im pro_id_2");
+            document.getElementById('pro_id_2_h').innerHTML = '<div class="year"><i class="bx bxs-calendar"></i> December 2022 - Present</div><h3><span>ECommerce Platform  </span></h3><p>Website -</p> <p>Target to deliever to localized departmental store so they can keep up with technologies and help them increase their sales by atleast 25% in first quarter.</p><p>Utilized Express.js to build a online order portal centre for shops.Integrated MongoDB for data storage and retrieval, ensuring data persistence.</p><p>Utilized Git version control to manage the projects codebase and Successfully deployed the website on a free cloud-based server to make it publicly accessible and increase online visibility.</p><p>Provided Multiple Payement Gateway solutions to users - Stripe for card payments and PayPal</p><p>Developed and followed a plan while wokring on the project helping me to learn about the difficluties towards project planning.</p></div></div></div>';
+        }
+
+        // Experience Section
+        function exp_id_1(){
+            console.log("im exp_id_1");
+            document.getElementById('education-box').innerHTML = '<div class="education-box" id="education-box"><div id="exp_id_1" class="education-content"><div class="content" onclick="exp_id_1();" id="exp_id_1_h"><div class="year"><i class="bx bxs-calendar"></i> March 2023 - Present</div><h3><span>Software Engineer - Thoughts2Binary Consulting Solutions Ltd </span></h3><p>Working On Synchronization of E-Commerce Platforms like Magento, WooCoomerce to a Third Party Admin Panel </p><p>Project Goal - Providing Client wth a Platform from where  they can track their orders and reach Retailers who were ready to partner and ship their products to areas where they cant reach themselves</p><p>Technologies Worked on : </p><p>Language - Python</p><p>AWS Services used - Serverless,S3,CloudWatch,DynamoDb</p></div></div><div id="exp_id_2" class="education-content"><div class="content"  onclick="exp_id_2();" id="exp_id_2_h"><div class="year"><i class="bx bxs-calendar"></i> March 2022 - March 2023</div><h3>Associate Software Engineer - Thoughts2Binary Consulting Solutions Ltd </h3></div></div><div id="exp_id_3" class="education-content"><div class="content" onclick="exp_id_3();" id="exp_id_3_h"><h3>Software Trainee - Kent Ro  </h3></div></div></div>';
+        }
+        function exp_id_2(){
+            console.log("im exp_id_2");
+            document.getElementById('education-box').innerHTML = '<div class="education-box" id="education-box"><div id="exp_id_1" class="education-content"><div class="content" onclick="exp_id_1();" id="exp_id_1_h"><div class="year"><i class="bx bxs-calendar"></i> March 2023 - Present</div><h3>Software Engineer - Thoughts2Binary Consulting Solutions Ltd </h3></div></div><div id="exp_id_2" class="education-content"><div class="content"  onclick="exp_id_2();" id="exp_id_2_h"><div class="year"><i class="bx bxs-calendar"></i> March 2022 - March 2023</div><h3><span>Associate Software Engineer - Thoughts2Binary Consulting Solutions Ltd </span></h3><p>Worked on adding features relating to Tax,Payments and InStore PickUp to meet client specific business requirements. Extending these feautures to WooCommerce BigCommerce</p><p>Contributed to troubleshooting and bug fixing, resolving critical issues promptly especially during sale time to minimize downtime and improve customer satisfaction.</p></div></div><div id="exp_id_3" class="education-content"><div class="content" onclick="exp_id_3();" id="exp_id_3_h"><h3>Software Trainee - Kent Ro  </h3></div></div></div>';
+        }
+        function exp_id_3(){
+            console.log("im exp_id_3");
+            document.getElementById('education-box').innerHTML = '<div class="education-box" id="education-box"><div id="exp_id_1" class="education-content"><div class="content" onclick="exp_id_1();" id="exp_id_1_h"><div class="year"><i class="bx bxs-calendar"></i> March 2023 - Present</div><h3>Software Engineer - Thoughts2Binary Consulting Solutions Ltd </h3></div></div><div id="exp_id_2" class="education-content"><div class="content"  onclick="exp_id_2();" id="exp_id_2_h"><div class="year"><i class="bx bxs-calendar"></i> March 2022 - March 2023</div><h3>Associate Software Engineer - Thoughts2Binary Consulting Solutions Ltd </h3></div></div><div id="exp_id_3" class="education-content"><div class="content" onclick="exp_id_3();" id="exp_id_3_h"><h3><span>Software Trainee - Kent Ro  </span></h3><p>Worked on Web Scarpping on Amazon and Flipkart using Core PHP</p><p>Amazon Online Data Scrapping</p><p>Aim of the project was to list various sellers selling restricted Kent RO products along with price variation. About 54% of sellers were identified and disabling their listings.</p><p>Flipkart Online Data Scrapping</p><p>Aim of the project was to identify various sellers selling duplicate products on the platform. About 40% sellers were sellers disabled their listing and 20 % sellers joined as distributorship partner.</p></div></div></div>';
+        }
+    </script>
 
 </head>
 <body>
     
     <!-- Header Design -->
     <header class="header">
-        <a href="#" class="logo">Utsav</a>
+        <a href="#" class="logo"><img src="homeIcon.jpg" style="width: 150px;"></a>
+        <!-- <a href="#" class="logo">Utsav <span>garg</span></a> -->
 
         <div class="bx bx-menu" id="menu-icon"></div>
             <nav class="navbar">
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
-                <a href="#education">Experience</a>
+                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
+                <a href="#certification">Certification</a>
+                <a href="#project">Project</a>
+                <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </nav>
     </header>
+
     <!-- home section design -->
     <section class="home" id="home">
         <div class ="home-content">
@@ -32,110 +91,104 @@
             <div class="text-animate">
                 <h3>Software Developer</h3>
             </div>
-            <p>I am a Software Developer.Welcome to my PortFolio Website.Feel free to browse and contact me  for Hiring.Currently Open to Work</p>
+            <p>I am a Software Developer.
+               Welcome to my PortFolio Website.Feel free to browse and contact me for Hiring.
+               Currently Open to Work</p>
 
             <div class="btn-box">
-               <!--  <a target="_blank" href="https://pdfhost.io/v/wKhG7v7Nk_resume" class="btn">View Resume</a>
-                <a href="resume.pdf" download class="btn">Save Resume</a> -->
-                <a href="#" class="btn">View Resume</a>
-                <a href="#" download class="btn">Save Resume</a>
+                <a target="_blank" href="resume.pdf" class="btn">View Resume</a>
+                <a href="resume.pdf" download class="btn">Save Resume</a>
             </div>
         </div>
 
 
         <div class="home-sci">
-            <a target="_blank" href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-gmail'></i></a>
-            <a href="#"><i class='bx bxl-gmail'></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/garg-utsav/"><i class='bx bxl-linkedin'></i></a>
+            <a target="_blank" href="https://github.com/rick-richestein"><i class='bx bxl-github'></i></a>
+            <a target="_blank" href="https://stackoverflow.com/users/20791536/utsav-garg"><i class='bx bxl-stack-overflow'</i></a>
         </div>
 
         <div class="home-imgHover"></div>
     </section>
-    
-    <!-- about.section design -->
+
+    <!-- customizing about.section design -->
     <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
+        <div class="row">
+            <div class="column-content">
+                <div class="about-content">
+                    <h2 class="heading">About <span>Me</span></h2>
+                    <!-- <h3>Software Developer</h3> -->
+                    <p>Passionate and dedicated software developer with 2 years of experience in the industry, specializing in PHP, Magento, and WooCommerce. Currently expanding my skill set and knowledge by actively learning Node.js.</p>
 
-        <div class="about-img">
-            <img src="/about.jpg" alt="">
-            <span class="circle-spin"></span>            
-        </div>
-        
-        <div class="about-content">
-            <h3>Software Developer</h3>
-            <p>IT professional with over 2 year of experience as Software Developer and 6 months as Team Leader on Web Development. Eager to join an
-                organization to apply my new skills on new technologies like Magento,Wordpress and Node JS.</p>
-
-            <div class="btn-box btns">
-                <a href="#" class="btn">Read More</a>
+                       <p>Proficient in developing robust and scalable e-commerce solutions using PHP frameworks, I have successfully delivered several projects that have enhanced online shopping experiences and increased sales. My expertise lies in customizing and extending Magento and WooCommerce platforms, ensuring seamless integration with various systems and third-party APIs.</p>
+                        
+                       <p>I am driven by the desire to stay ahead of the technology curve and consistently upgrade my skills. Currently, I am focusing on learning Node.js to broaden my capabilities in building efficient and real-time web applications. This ongoing learning process demonstrates my commitment to personal and professional growth in the ever-evolving software development landscape.</p>
+                       
+                       <p>Throughout my career, I have collaborated closely with cross-functional teams to deliver high-quality software solutions. I am adept at translating business requirements into technical specifications, providing innovative solutions to complex problems, and ensuring the timely delivery of projects.</p>
+                    <div class="btn-box btns">
+                        <a target="_blank" href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="column-image">
+                <div class="about-img">
+                    <img src="/about.jpg" alt="">
+                    <span class="circle-spin"></span>            
+                </div>
             </div>
         </div>
     </section>
 
+<!-- customizing about.section design -->
+    <!-- about.section design -->
+        <!--  <section class="about" id="about">
+            <h2 class="heading">About <span>Me</span></h2>
+            <div class="about-img">
+                <img src="/about.jpg" alt="">
+                <span class="circle-spin"></span>            
+            </div>
+            <div class="about-content">
+                <h3>Software Developer</h3>
+                <p>IT professional with over 2 year of experience as Software Developer and 6 months as Team Leader on Web Development. Eager to join an
+                    organization to apply my new skills on new technologies like Magento,Wordpress and Node JS.</p>
+
+                <div class="btn-box btns">
+                    <a target="_blank" href="https://www.linkedin.com/in/garg-utsav/" class="btn">My LinkedIn</a>
+                </div>
+            </div>
+        </section> -->
+<!-- customizing about.section design -->
+
     <!-- education section design -->
-    <section class="education" id="education">
+    <section class="education" id="experience" style="padding-bottom: 34rem;">
         <h2 class="heading">My <span>Journey</span></h2>
 
         <div class="education-row">
             <div class="education-column">
-                <h3 class="title">Experience</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
+                <h3 class="title">Where I’ve Worked</h3>
+                <div class="education-box" id="education-box">
+                    <div id="exp_id_1" class="education-content">
+                        <div class="content" onclick="exp_id_1();" id="exp_id_1_h">
                             <div class="year"><i class="bx bxs-calendar"></i> March 2023 - Present</div>
-                            <h3>Software Engineer - Thoughts2Binary Consulting Solutions Ltd  </h3>
-                            <p>Working On E-Commerce Platforms like Magento, WooCoomerce </p>
+                            <h3><span>Software Engineer - Thoughts2Binary Consulting Solutions Ltd </span></h3>
+                            <p>Working On Synchronization of E-Commerce Platforms like Magento, WooCoomerce to a Third Party Admin Panel </p>
+                            <p>Project Goal - Providing Client wth a Platform from where  they can track their orders and reach Retailers who were ready to partner and ship their products to areas where they cant reach themselves</p>
+                            <p>Technologies Worked on : </p><p>Language - Python</p>
+                            <p>AWS Services used - Serverless,S3,CloudWatch,DynamoDb</p>
                         </div>
                     </div>
 
-                    <div class="education-content">
-                        <div class="content">
+                    <div id="exp_id_2" class="education-content">
+                        <div class="content"  onclick="exp_id_2();" id="exp_id_2_h">
                             <div class="year"><i class="bx bxs-calendar"></i> March 2022 - March 2023</div>
                             <h3>Associate Software Engineer - Thoughts2Binary Consulting Solutions Ltd  </h3>
-                            <p>Working On E-Commerce Platforms like Magento, WooCoomerce </p>
                         </div>
                     </div>
 
-                    <div class="education-content">
-                        <div class="content">
+                    <div id="exp_id_3" class="education-content">
+                        <div class="content" onclick="exp_id_3();" id="exp_id_3_h">
                             <!-- <div class="year"><i class="bx bxs-calendar"></i> September 2019-2019</div> -->
                             <h3>Software Trainee - Kent Ro  </h3>
-                            <p>Working on Core PHp on Web Scarpping on Amazon and Flipkart</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="education-column">
-                <h3 class="title">Education</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i> 2015-2019</div>
-                            <h3>Bachelor Degree - Bharati Vidyapeeth College of Engineering,
-                                Pune </h3>
-                            <p>Completed my Bachelor Of Technolgy with a CGPA 8.86</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i> 2015-2019</div>
-                            <h3>Higher Secondary Education </h3>
-                            <p>Completed my Higher Secondary Education from KIIT World School 
-                                with a percentage of 91%</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i> 2015-2019</div>
-                            <h3>Secondary Education </h3>
-                            <p>UCompleted my Secondary Education from KIIT World School 
-                                with a CGPA of 9.1</p>
                         </div>
                     </div>
                 </div>
@@ -144,63 +197,77 @@
     </section>
 
     <!-- skills section design -->
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" style="padding-bottom: 34rem;">
         <h2 class="heading">My <span>Skills</span></h2>
 
         <div class="skills-row">
             <div class="skills-column">
-                <h3 class="title">Coding Skills</h3>
+                <h3 class="title">Programming Languages I am well versed in </h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="progress">
-                            <h3>PHP <span>85%</span></h3>
-                            <p>PHP based E-Commerce Platforms - 
-                                WooCommerce,Magento</p>
+                            <div class="content">PHP</div>
+                            <!-- <p>PHP based E-Commerce Platforms - 
+                                WooCommerce,Magento</p> -->
+                        </div>
+                        <div class="progress">
+                            <div class="content">Python</div>
+                            <p>Comfortable working on Python</p>
                         </div>
 
                         <div class="progress">
-                            <h3>Node JS <span>65%</span></h3>
-                            <p>Frameworks - Express JS</p>
+                            <div class="content">C++</div>
+                            <p>Worked on couple of small projects</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <h3 class="title">Web Development: </h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <div class="content">Express JS </div>
+                            <p>Working on Personal Project E-Commerce Platform</p>
+                        </div>
+                        <div class="progress">
+                            <div class="content">Magento2 </div>
+                            <p>Worked on Magento2 at T2b for adding multiple functionalities and troubleshooting</p>
+                        </div>
+                        <div class="progress">
+                            <div class="content">WooCommerce </div>
                         </div>
 
-                        <div class="progress">
-                            <h3>Python <span>60%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>C++ <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="skills-column">
-                <h3 class="title">Other Skills</h3>
+                <h3 class="title">Supporting Software Skills</h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="progress">
-                            <h3>Database - MySQL,MongoDB <span>60%</span></h3>
-                           <!--  <div class="bar"><span></span></div> -->
+                            <div class="content">Database - MySQL,MongoDB </div>
+                            <p>Proficient in MySql Database.
+                                Also Hand on experience on MongoDB Database with my personal project
+                            </p>
                         </div>
 
                         <div class="progress">
-                            <h3>Git <span>50%</span></h3>
-                            <p>Comfortable working with Git commands and proficient with handling 
-                                code on different branches simultaneously</p>
+                            <div class="content">Git </div>
+                            <p>Comfortable working with Git commands</p>
                         </div>
 
                         <div class="progress">
-                            <h3>DevOps <span>70%</span></h3>
-                            <p>Currently learning Docker and Kubernetes 
-                                    </p>
+                            <div class="content">DevOps </div>
+                            <p>Currently learning Docker and Kubernetes </p>
                         </div>
 
                         <div class="progress">
-                            <h3>Linux <span>90%</span></h3>
+                            <div class="content">Linux </div>
                             <p>Comfortable working with Linux system</p>
                         </div>
                     </div>
@@ -208,36 +275,139 @@
             </div>
         </div>
     </section>
+    
+    <!-- certification section design -->
+    <section class="education" id="certification" style="padding-bottom: 10rem;">
+        <h2 class="heading"><span>Awards</span> and <span>Certifications</span></h2>
+        <div class="education-row">
+            <div class="education-column">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <h3 class="title" id="inter">HackerRank Sql - Intermediate Certification</h3>
+                        <img src="sql_inter.jpg" alt="HackerRank SQL Certification" style="float:left;width:700px;">
+                    </div>
+                    <div class="mySlides fade" style="display: none;">
+                        <h3 class="title" id="inter">HackerRank Sql - Basic Certification</h3>
+                        <img src="sql_basic.jpg" alt="HackerRank SQL Certification" style="float:left;width:700px;">
+                    </div>
+                    <div class="mySlides fade" style="display: none;">
+                        <h3 class="title" id="inter">HackerRank JavaScipt - Basic Certification</h3>
+                        <img src="js_basic.jpg" alt="HackerRank SQL Certification" style="float:left;width:700px;">
+                    </div>
+                    <div class="mySlides fade" style="display: none;">
+                        <h3 class="title" id="inter">Thoughts2Binary Appreciation Post</h3>
+                        <img src="appreication.jpg" alt="HackerRank SQL Certification" style="float:left;width:700px;height:500px;">
+                    </div>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br><br><br><br>
+            </div>
+        </div>
+    </section>
+
+    <!-- project section design -->
+    <section class="skills" id="project" style="padding-bottom: 34rem;">
+        <h2 class="heading">My <span>Projects</span></h2>
+
+        <div class="skills-row">
+            <div id="pro_1" class="skills-column">
+                <h3 class="title">Short Term project </h3>
+                    <div class="education-content">
+                        <div class="content" onclick="pro_id_1();" id="pro_id_1_h">
+                            <div class="year"><i class="bx bxs-calendar"></i> May 2023 - Present</div>
+                            <h3><span>PortFolio Website  </span></h3>
+                            <p><a class="target" target="_blank" href="https://utsav-garg-portfolio.onrender.com">Click To Visit</a></p>
+                            <p>Developing a personal portfolio website using Express.js, showcasing my educational and professional journey.</p>
+                            <p>Integrated various front-end technologies, including HTML, CSS, and JavaScript, to design an aesthetically pleasing and user-friendly interface.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="pro_2" class="skills-column">
+                <h3 class="title">Long Time Planned Project</h3>
+                <div class="education-content">
+                    <div class="content"  onclick="pro_id_2();" id="pro_id_2_h">
+                        <div class="year"><i class="bx bxs-calendar"></i> December 2022 - Present</div>
+                        <h3><span>ECommerce Platform  </span></h3>
+                        <p>Website - https://utsav-garg-portfolio.onrender.com.</p>
+                        <p>Target to deliever to localized departmental store so they can keep up with technologies and help them increase their sales by atleast 25% in first quarter.</p>
+                        <p>Utilized Express.js to build a online order portal centre for shops.I ntegrated MongoDB for data storage and retrieval, ensuring data persistence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- customzing education section -->
+    <section class="education" id="education" style="padding-bottom: 15rem;">
+        <h2 class="heading">My Education <span>Journey</span></h2>
+        <div class="education-column">
+            <h3 class="title">Education</h3>
+
+            <div class="education-box">
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="bx bxs-calendar"></i> 2015-2019</div>
+                        <h3>Bachelor Degree - Bharati Vidyapeeth College of Engineering,
+                            Pune </h3>
+                        <p>Completed my Bachelor Of Technolgy with a CGPA 8.86</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="bx bxs-calendar"></i> 2015-2019</div>
+                        <h3>Higher Secondary Education </h3>
+                        <p>Completed my Higher Secondary Education from KIIT World School 
+                            with a percentage of 91%</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="bx bxs-calendar"></i> 2015-2019</div>
+                        <h3>Secondary Education </h3>
+                        <p>Completed my Secondary Education from KIIT World School 
+                            with a CGPA of 9.1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- customzing education section -->
 
     <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+    <section class="contact" id="contact" style="padding-bottom: 5rem;">
+        <h2 class="heading">Get In Touch With <span>Me!</span></h2>
 
-        <form action="#">
+        <div class="about-content">
+            <!-- <p>Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p> -->
+        </div>
+        <form action="/send-mail" method="POST">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" id="sendername" placeholder="Full Name"  name="senderName" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" id="email" placeholder="Email Address" name="senderEmail" required>
                     <span class="focus"></span>
                 </div>
             </div>
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
+                    <input type="number" placeholder="Mobile Number" name="senderNumber" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
+                    <input type="text" id="subject" placeholder="Email Subject" name="mailSubject" required>
                     <span class="focus"></span>
                 </div>
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea id="messageMail" cols="30" rows="10" placeholder="Your Message" name="mailBody" required></textarea>
                 <span class="focus"></span>
             </div>
 
@@ -247,9 +417,7 @@
         </form>
     </section>
 
-
-    <!-- footer design -->
-
+    <!-- footer section design -->
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2023 by Utsav Garg | All Rights Reserved</p>
